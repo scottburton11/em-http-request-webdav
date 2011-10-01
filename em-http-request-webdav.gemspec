@@ -4,12 +4,12 @@ require "em-http-request-webdav/version"
 
 Gem::Specification.new do |s|
   s.name        = "em-http-request-webdav"
-  s.version     = Em::Http::Request::Webdav::VERSION
-  s.authors     = ["TODO: Write your name"]
+  s.version     = EMHttpRequestWebdav::VERSION
+  s.authors     = ["Scott Burton"]
   s.email       = ["scottburton11@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "http://github.com/em-http-request-webdav"
+  s.summary     = %q{Adds WebDAV-specific HTTP methods to em-http-request}
+  s.description = %q{Adds WebDAV-specific HTTP methods to em-http-request. Works with em-synchrony too.}
 
   s.rubyforge_project = "em-http-request-webdav"
 
@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "eventmachine", ">=1.0.0.beta.1"
+  s.add_runtime_dependency "em-http-request", ">=1.0.0"
 end
